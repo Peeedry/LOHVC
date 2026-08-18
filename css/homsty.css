@@ -1,0 +1,83 @@
+/* Estilos da fonte 'Inter' */
+@font-face {
+  font-family: 'Inter';
+  src: url(../fonts/static/Inter-Black.ttf);
+}
+
+/* Estilos da fonte 'Inter' */
+@font-face {
+  font-family: 'Inter';
+  src: url(../fonts/static/Inter-Black.ttf);
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+
+/* Style the content */
+.content {
+  background: rgb(9,7,154);
+  background: linear-gradient(180deg, rgba(9,7,154,0.9859593495601365) 0%, rgba(7,73,171,1) 100%);
+  padding: 380px;
+}
+
+.content h2{
+  font-family: 'Inter';
+  color: white;
+  text-align: left;
+}
+
+/* Style the footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 300px;
+}
+
+.btn {
+  position: absolute;
+  top: 600px;
+  right: 100px;
+}
+
+.bot {
+  background-color: #ffffff;
+  border-radius: 15px;
+  border: none;
+  color: #FB8500;
+  padding: 16px 32px;
+  text-align: center;
+  font-family: 'Inter';
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: 0.5s;
+  width: 150px;
+}
+
+.bot:hover {
+  background: #FB8500;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.a {
+  font-size: 100px;
+  position: absolute;
+  top: 100px;
+  right: 900px;
+}
+
+.circulo{
+    width: 100px; 
+    height: 100px; 
+    background: #FB8500; 
+    -moz-border-radius: 50px; 
+    -webkit-border-radius: 50px; 
+    border-radius: 50px;
+    position: absolute;
+    right: 900px; 
+
+}

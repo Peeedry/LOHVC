@@ -1,0 +1,11 @@
+body {
+  height: 746px;
+  background: rgb(9,7,154);
+  background: linear-gradient(180deg, rgba(9,7,154,0.9859593495601365) 0%, rgba(7,73,171,1) 100%);
+}
+
+.custom-form {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+}

@@ -1,0 +1,55 @@
+<?php
+//session_start();
+include_once('conexao.php');
+
+$pdo = conectar();
+
+$sql = "SELECT * FROM tb_cursos";
+$stmt = $pdo->prepare($sql);
+$stmt->execute();
+// buscando todos as linhas da tabela
+$resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// buscando um unico registro
+// $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
+?>
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Listagem de Cursos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery.js"></script>
+</head>
+
+<body>
+    <h2>
+        <center>Listagem de Cursos</center>
+    </h2>
+    <table class="table table-striped table-bordered">
+        <tr class="table">
+            <th>ID:</th>
+            <th>Tipo:</th>
+            <th>Descrição:</th>
+            <th>Duração/Meses:</th>
+            <th>Preço:</th>
+            <th>Ativo:</th>
+        </tr>
+        <?php foreach ($resultado as $r) { ?>
+            <tr>
+                <td><?php echo $r['id_curs']; ?></td>
+                <td><?php echo $r['tipo_curs']; ?></td>
+                <td><?php echo $r['desc_curs']; ?></td>
+                <td><?php echo $r['dur_curs']; ?></td>
+                <td><?php echo $r['preco_curs']; ?></td>
+                <td><?php echo $r['ativo_curs']; ?></td>
+            </tr>
+
+        <?php } ?>
+    </table>
+</body>
+
+</html>
